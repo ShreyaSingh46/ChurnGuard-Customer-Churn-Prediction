@@ -1,43 +1,70 @@
+# ChurnGuard — Customer Churn Prediction
 
-# ChurnGuard – Customer Intelligence & Retention Platform
+ChurnGuard is a Python and Streamlit machine learning application that estimates whether a telecom customer is likely to leave a service. It uses the IBM Telco Customer Churn dataset and presents a prediction with a churn probability and a simple retention-oriented suggestion.
 
 ## Project Overview
-ChurnGuard is a machine learning-based application that predicts whether a telecom customer is likely to leave the service.
 
-## Problem Statement
-Customer churn can affect the growth and revenue of telecom companies. This project uses machine learning to identify customers who may leave so that suitable retention steps can be taken.
+Customer churn can affect a telecom company's customer base and revenue. This project explores how supervised machine learning can help identify customers who may be at risk of leaving.
 
-## Dataset
-IBM Telco Customer Churn Dataset (7,043 customer records).
+## Features
 
-## Algorithms Used
+- Enter customer details through a Streamlit interface.
+- Generate a churn prediction.
+- View the predicted churn probability.
+- Display a simple retention recommendation.
+
+## Machine Learning
+
+The project explores these classification algorithms:
+
 - Logistic Regression
 - K-Nearest Neighbors (KNN)
 - Support Vector Machine (SVM)
 - Decision Tree
 
-## Technologies Used
+The existing project documentation identifies **Logistic Regression** as the selected final model based on its overall evaluation. No performance metric is stated here because a verified score is not included in the project summary.
+
+## Technology Stack
+
 - Python
 - Pandas
 - Scikit-learn
 - Streamlit
 - Joblib
 
-## Application Features
-- Enter customer details.
-- Predict whether a customer is likely to churn.
-- View churn probability.
-- Display a simple retention recommendation.
+## Repository Structure
 
-## How to Run
+- `app.py` — Streamlit application.
+- `data/` — project dataset resources.
+- `experiments/` — model experiment materials.
+- `models/` — saved model resources.
+- `notebooks/` — notebook-based exploration.
+- `inspect_data.py`, `preprocess_data.py`, `prepare_features.py`, `split_data.py` — data preparation workflow.
+- `requirements.txt` — Python dependencies.
 
-1. Install the required libraries:
+## Run Locally
 
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/ShreyaSingh46/ChurnGuard-Customer-Churn-Prediction.git
+   cd ChurnGuard-Customer-Churn-Prediction
+   ```
+
+2. Install dependencies:
+
+   ```bash
    pip install -r requirements.txt
+   ```
 
-2. Run the application:
+3. Start the Streamlit app:
 
+   ```bash
    streamlit run app.py
+   ```
 
-## Final Model
-Logistic Regression was selected as the final model based on its overall evaluation performance.
+## Learning Goals
+
+This project brings together data preprocessing, feature preparation, classification models, model selection, and a simple interactive interface.
+
+> **Note:** ChurnGuard is an educational machine learning project. Predictions are estimates based on the dataset and model, not guarantees about an individual customer's behaviour.
